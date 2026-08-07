@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import DemoModal from './components/DemoModal';
@@ -14,17 +14,8 @@ import FaqView from './pages/FaqView';
 
 export default function App() {
   const [currentView, setCurrentView] = useState('home');
-  const [theme, setTheme] = useState('dark');
   const [demoModalOpen, setDemoModalOpen] = useState(false);
   const [demoModalTitle, setDemoModalTitle] = useState('Request Demo');
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-  };
 
   const handleOpenDemoModal = (title = 'Request Demo') => {
     setDemoModalTitle(title);
@@ -56,13 +47,11 @@ export default function App() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--bg-main)' }}>
-      {/* Sticky Glassmorphism Header */}
+      {/* Sticky Header */}
       <Header 
         currentView={currentView} 
         setCurrentView={setCurrentView} 
         onRequestDemo={handleOpenDemoModal}
-        theme={theme}
-        toggleTheme={toggleTheme}
       />
 
       {/* Main Dynamic View Area */}

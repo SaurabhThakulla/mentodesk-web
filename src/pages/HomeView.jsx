@@ -107,122 +107,137 @@ export default function HomeView({ setCurrentView, onRequestDemo }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(340px,1fr))] gap-8">
           
           {/* Card 1: MentoDesk */}
-          <div className="group bg-white border border-gray-200 rounded-2xl p-8 pb-7 flex flex-col justify-between relative overflow-hidden shadow-[0_4px_14px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-green/30 hover:shadow-[0_15px_35px_-10px_rgba(0,184,83,0.12)]">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-brand-green/10 text-brand-green border border-brand-green/20 flex items-center justify-center mb-5">
-                <Monitor size={24} />
+          <div className="group bg-white border border-gray-200 rounded-3xl p-9 flex flex-col justify-between relative overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-400 hover:-translate-y-2 hover:border-brand-green/40 hover:shadow-[0_20px_40px_-15px_rgba(0,184,83,0.2)]">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-brand-green/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
+            <div className="relative z-10">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-green/10 to-brand-green/20 text-brand-green border border-brand-green/20 flex items-center justify-center mb-6 shadow-sm">
+                <Monitor size={26} strokeWidth={2.5} />
               </div>
 
-              <div className="text-[0.72rem] font-bold uppercase tracking-wider text-brand-green mb-1.5">
+              <div className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-brand-green mb-2 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-brand-green"></span>
                 Flagship Desk Ops
               </div>
-              <h3 className="text-[1.35rem] font-extrabold text-gray-900 mb-2.5 tracking-tight">
+              <h3 className="text-2xl font-extrabold text-gray-900 mb-3 tracking-tight">
                 MentoDesk Smart Campus
               </h3>
-              <p className="text-[0.9rem] text-gray-600 leading-relaxed mb-6">
+              <p className="text-[0.98rem] text-gray-600 leading-relaxed mb-8">
                 IoT-enabled desk management, contactless attendance tracker, and facility allocation platform for multi-building campus layouts.
               </p>
 
-              <ul className="list-none pt-5 m-0 mb-7 border-t border-gray-200 flex flex-col gap-2.5">
-                <li className="flex items-center gap-2 text-[0.84rem] text-gray-600 font-medium">
-                  <CheckCircle2 size={15} className="text-brand-green" /> IoT Beacon & Biometric Hardware Sync
+              <ul className="list-none pt-6 m-0 mb-8 border-t border-gray-100 flex flex-col gap-3.5">
+                <li className="flex items-start gap-3 text-[0.92rem] text-gray-700 font-medium">
+                  <CheckCircle2 size={18} className="text-brand-green shrink-0 mt-0.5" /> 
+                  <span>IoT Beacon & Biometric Hardware Sync</span>
                 </li>
-                <li className="flex items-center gap-2 text-[0.84rem] text-gray-600 font-medium">
-                  <CheckCircle2 size={15} className="text-brand-green" /> Real-time Occupancy & Seat Map
+                <li className="flex items-start gap-3 text-[0.92rem] text-gray-700 font-medium">
+                  <CheckCircle2 size={18} className="text-brand-green shrink-0 mt-0.5" /> 
+                  <span>Real-time Occupancy & Seat Map</span>
                 </li>
-                <li className="flex items-center gap-2 text-[0.84rem] text-gray-600 font-medium">
-                  <CheckCircle2 size={15} className="text-brand-green" /> Role-based Admin & Student Portals
+                <li className="flex items-start gap-3 text-[0.92rem] text-gray-700 font-medium">
+                  <CheckCircle2 size={18} className="text-brand-green shrink-0 mt-0.5" /> 
+                  <span>Role-based Admin & Student Portals</span>
                 </li>
               </ul>
             </div>
 
             <button 
               onClick={() => setCurrentView('products')} 
-              className="w-full flex items-center justify-center gap-1.5 py-3 px-5 rounded-xl bg-gray-100 border border-gray-200 text-gray-900 text-[0.88rem] font-semibold cursor-pointer transition-all duration-200 group-hover:bg-brand-green-subtle group-hover:border-brand-green-border group-hover:text-brand-green"
+              className="relative z-10 w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gray-50 text-gray-900 text-[0.95rem] font-bold cursor-pointer transition-all duration-300 group-hover:bg-brand-green group-hover:text-white shadow-sm hover:shadow-md"
             >
               <span>Explore MentoDesk Specs</span>
-              <ArrowRight size={15} />
+              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </button>
           </div>
 
           {/* Card 2: Fee Engine */}
-          <div className="group bg-white border border-gray-200 rounded-2xl p-8 pb-7 flex flex-col justify-between relative overflow-hidden shadow-[0_4px_14px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:border-sky-600/30 hover:shadow-[0_15px_35px_-10px_rgba(2,132,199,0.12)]">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-sky-600/10 text-sky-600 border border-sky-600/20 flex items-center justify-center mb-5">
-                <CreditCard size={24} />
+          <div className="group bg-white border border-gray-200 rounded-3xl p-9 flex flex-col justify-between relative overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-400 hover:-translate-y-2 hover:border-sky-500/40 hover:shadow-[0_20px_40px_-15px_rgba(14,165,233,0.2)]">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-sky-500/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
+            <div className="relative z-10">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500/10 to-sky-500/20 text-sky-600 border border-sky-500/20 flex items-center justify-center mb-6 shadow-sm">
+                <CreditCard size={26} strokeWidth={2.5} />
               </div>
 
-              <div className="text-[0.72rem] font-bold uppercase tracking-wider text-sky-600 mb-1.5">
+              <div className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-sky-600 mb-2 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-sky-500"></span>
                 Financial Automation
               </div>
-              <h3 className="text-[1.35rem] font-extrabold text-gray-900 mb-2.5 tracking-tight">
+              <h3 className="text-2xl font-extrabold text-gray-900 mb-3 tracking-tight">
                 Fee Management System
               </h3>
-              <p className="text-[0.9rem] text-gray-600 leading-relaxed mb-6">
+              <p className="text-[0.98rem] text-gray-600 leading-relaxed mb-8">
                 Automated tuition engine with multi-currency billing structures, payment gateway integrations, PDF receipts, and ledger reconciliation.
               </p>
 
-              <ul className="list-none pt-5 m-0 mb-7 border-t border-gray-200 flex flex-col gap-2.5">
-                <li className="flex items-center gap-2 text-[0.84rem] text-gray-600 font-medium">
-                  <CheckCircle2 size={15} className="text-brand-green" /> 99.8% On-Time Fee Recovery
+              <ul className="list-none pt-6 m-0 mb-8 border-t border-gray-100 flex flex-col gap-3.5">
+                <li className="flex items-start gap-3 text-[0.92rem] text-gray-700 font-medium">
+                  <CheckCircle2 size={18} className="text-sky-500 shrink-0 mt-0.5" /> 
+                  <span>99.8% On-Time Fee Recovery</span>
                 </li>
-                <li className="flex items-center gap-2 text-[0.84rem] text-gray-600 font-medium">
-                  <CheckCircle2 size={15} className="text-brand-green" /> Stripe & DBS PayLah! Multi-Gateway
+                <li className="flex items-start gap-3 text-[0.92rem] text-gray-700 font-medium">
+                  <CheckCircle2 size={18} className="text-sky-500 shrink-0 mt-0.5" /> 
+                  <span>Stripe & DBS PayLah! Multi-Gateway</span>
                 </li>
-                <li className="flex items-center gap-2 text-[0.84rem] text-gray-600 font-medium">
-                  <CheckCircle2 size={15} className="text-brand-green" /> Zero Manual Bank Reconciliation
+                <li className="flex items-start gap-3 text-[0.92rem] text-gray-700 font-medium">
+                  <CheckCircle2 size={18} className="text-sky-500 shrink-0 mt-0.5" /> 
+                  <span>Zero Manual Bank Reconciliation</span>
                 </li>
               </ul>
             </div>
 
             <button 
               onClick={() => setCurrentView('products')} 
-              className="w-full flex items-center justify-center gap-1.5 py-3 px-5 rounded-xl bg-gray-100 border border-gray-200 text-gray-900 text-[0.88rem] font-semibold cursor-pointer transition-all duration-200 group-hover:bg-sky-600/10 group-hover:border-sky-600/20 group-hover:text-sky-700"
+              className="relative z-10 w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gray-50 text-gray-900 text-[0.95rem] font-bold cursor-pointer transition-all duration-300 group-hover:bg-sky-500 group-hover:text-white shadow-sm hover:shadow-md"
             >
               <span>Explore Fee Engine</span>
-              <ArrowRight size={15} />
+              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </button>
           </div>
 
           {/* Card 3: LMS */}
-          <div className="group bg-white border border-gray-200 rounded-2xl p-8 pb-7 flex flex-col justify-between relative overflow-hidden shadow-[0_4px_14px_rgba(0,0,0,0.03)] transition-all duration-300 hover:-translate-y-1.5 hover:border-violet-600/30 hover:shadow-[0_15px_35px_-10px_rgba(124,58,237,0.12)]">
-            <div>
-              <div className="w-12 h-12 rounded-xl bg-violet-600/10 text-violet-600 border border-violet-600/20 flex items-center justify-center mb-5">
-                <BookOpen size={24} />
+          <div className="group bg-white border border-gray-200 rounded-3xl p-9 flex flex-col justify-between relative overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.04)] transition-all duration-400 hover:-translate-y-2 hover:border-violet-500/40 hover:shadow-[0_20px_40px_-15px_rgba(139,92,246,0.2)]">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-violet-500/5 rounded-bl-full -mr-10 -mt-10 transition-transform group-hover:scale-110"></div>
+            <div className="relative z-10">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500/10 to-violet-500/20 text-violet-600 border border-violet-500/20 flex items-center justify-center mb-6 shadow-sm">
+                <BookOpen size={26} strokeWidth={2.5} />
               </div>
 
-              <div className="text-[0.72rem] font-bold uppercase tracking-wider text-violet-600 mb-1.5">
+              <div className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-violet-600 mb-2 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-violet-500"></span>
                 Virtual Learning
               </div>
-              <h3 className="text-[1.35rem] font-extrabold text-gray-900 mb-2.5 tracking-tight">
+              <h3 className="text-2xl font-extrabold text-gray-900 mb-3 tracking-tight">
                 Customized LMS Portal
               </h3>
-              <p className="text-[0.9rem] text-gray-600 leading-relaxed mb-6">
+              <p className="text-[0.98rem] text-gray-600 leading-relaxed mb-8">
                 Virtual learning platform with video streaming, AI assignment evaluation, grading rubrics, live class integrations, and mobile learning.
               </p>
 
-              <ul className="list-none pt-5 m-0 mb-7 border-t border-gray-200 flex flex-col gap-2.5">
-                <li className="flex items-center gap-2 text-[0.84rem] text-gray-600 font-medium">
-                  <CheckCircle2 size={15} className="text-brand-green" /> AI Quiz Generator & Scoring
+              <ul className="list-none pt-6 m-0 mb-8 border-t border-gray-100 flex flex-col gap-3.5">
+                <li className="flex items-start gap-3 text-[0.92rem] text-gray-700 font-medium">
+                  <CheckCircle2 size={18} className="text-violet-500 shrink-0 mt-0.5" /> 
+                  <span>AI Quiz Generator & Scoring</span>
                 </li>
-                <li className="flex items-center gap-2 text-[0.84rem] text-gray-600 font-medium">
-                  <CheckCircle2 size={15} className="text-brand-green" /> High-Bandwidth Video Streaming
+                <li className="flex items-start gap-3 text-[0.92rem] text-gray-700 font-medium">
+                  <CheckCircle2 size={18} className="text-violet-500 shrink-0 mt-0.5" /> 
+                  <span>High-Bandwidth Video Streaming</span>
                 </li>
-                <li className="flex items-center gap-2 text-[0.84rem] text-gray-600 font-medium">
-                  <CheckCircle2 size={15} className="text-brand-green" /> White-Label College Branding
+                <li className="flex items-start gap-3 text-[0.92rem] text-gray-700 font-medium">
+                  <CheckCircle2 size={18} className="text-violet-500 shrink-0 mt-0.5" /> 
+                  <span>White-Label College Branding</span>
                 </li>
               </ul>
             </div>
 
             <button 
               onClick={() => setCurrentView('products')} 
-              className="w-full flex items-center justify-center gap-1.5 py-3 px-5 rounded-xl bg-gray-100 border border-gray-200 text-gray-900 text-[0.88rem] font-semibold cursor-pointer transition-all duration-200 group-hover:bg-violet-600/10 group-hover:border-violet-600/20 group-hover:text-violet-700"
+              className="relative z-10 w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-gray-50 text-gray-900 text-[0.95rem] font-bold cursor-pointer transition-all duration-300 group-hover:bg-violet-600 group-hover:text-white shadow-sm hover:shadow-md"
             >
               <span>Explore LMS Specs</span>
-              <ArrowRight size={15} />
+              <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
             </button>
           </div>
 

@@ -32,7 +32,7 @@ export default function DemoModal({ isOpen, onClose, initialTitle }) {
 
         {!submitted ? (
           <div>
-            <h3 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '0.35rem', color: 'var(--text-primary)' }}>
+            <h3 style={{ fontSize: '1.35rem', fontWeight: '600', marginBottom: '0.35rem', color: 'var(--text-primary)' }}>
               {initialTitle || 'Request Live Product Demo'}
             </h3>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
@@ -98,7 +98,7 @@ export default function DemoModal({ isOpen, onClose, initialTitle }) {
         ) : (
           <div style={{ textAlign: 'center', padding: '1.5rem 0' }}>
             <CheckCircle2 size={48} color="#00b853" style={{ margin: '0 auto 1rem' }} />
-            <h3 style={{ fontSize: '1.3rem', fontWeight: '800', marginBottom: '0.5rem' }}>Demo Request Received</h3>
+            <h3 style={{ fontSize: '1.25rem', fontWeight: '600', marginBottom: '0.5rem' }}>Demo Request Received</h3>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
               Our technical solutions team will reach out within 4 business hours to schedule your live walkthrough.
             </p>

@@ -44,10 +44,10 @@ export default function ProductsView({ onRequestDemo }) {
             <div key={idx} className="minimal-card" style={{ padding: '2rem' }}>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', alignItems: 'center' }}>
                 <div>
-                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', fontWeight: '700', textTransform: 'uppercase', color: prod.badgeColor, marginBottom: '0.6rem' }}>
+                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.78rem', fontWeight: '600', textTransform: 'uppercase', color: prod.badgeColor, marginBottom: '0.6rem' }}>
                     <IconComp size={16} /> {prod.tag}
                   </div>
-                  <h3 style={{ fontSize: '1.5rem', fontWeight: '800', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>{prod.title}</h3>
+                  <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>{prod.title}</h3>
                   <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: '1.6', marginBottom: '1.5rem' }}>{prod.desc}</p>
                   
                   <button onClick={() => onRequestDemo(`Demo: ${prod.title}`)} className="btn-primary" style={{ fontSize: '0.88rem' }}>
@@ -56,7 +56,7 @@ export default function ProductsView({ onRequestDemo }) {
                 </div>
 
                 <div style={{ background: 'var(--bg-subtle)', padding: '1.5rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-color)' }}>
-                  <div style={{ fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.85rem' }}>Core Capabilities</div>
+                  <div style={{ fontSize: '0.82rem', fontWeight: '600', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.85rem' }}>Core Capabilities</div>
                   <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.65rem', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
                     {prod.features.map((feat, i) => (
                       <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

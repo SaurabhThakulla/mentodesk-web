@@ -109,17 +109,17 @@ export default function Header({ currentView, setCurrentView, onRequestDemo }) {
         <div className="container flex items-center justify-between h-[72px]">
           
           {/* Logo Section */}
-          <div onClick={() => handleNavClick('home')} className="flex items-center gap-2 cursor-pointer no-underline">
+          <div onClick={() => handleNavClick('home')} className="flex items-center gap-2 cursor-pointer no-underline group">
             <img 
               src={logoImg} 
               alt="MentoDesk" 
-              className="h-9 w-auto object-contain" 
+              className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = `${import.meta.env.BASE_URL}logo.png`;
               }}
             />
-            <span className="inline-flex items-center justify-center text-[0.68rem] font-bold px-2 py-0.5 rounded bg-brand-green-subtle text-brand-green border border-brand-green-border tracking-wider leading-none">
+            <span className="inline-flex items-center justify-center text-[0.68rem] font-bold px-2 py-0.5 rounded bg-brand-green-subtle text-brand-green border border-brand-green-border tracking-wider leading-none transition-transform duration-300 group-hover:scale-105">
               Pro
             </span>
           </div>
@@ -133,17 +133,24 @@ export default function Header({ currentView, setCurrentView, onRequestDemo }) {
               >
                 <button
                   onClick={() => handleNavClick(link.id)}
-                  className={`border-none px-3.5 py-2 rounded-lg text-[0.88rem] flex items-center gap-1.5 cursor-pointer transition-all duration-200 ${
+                  className={`border-none px-3.5 py-2 rounded-xl text-[0.88rem] flex items-center gap-1.5 cursor-pointer transition-all duration-200 ${
                     currentView === link.id 
-                      ? 'bg-brand-green/10 font-bold text-brand-green' 
-                      : 'bg-transparent font-medium text-gray-600 hover:text-gray-900'
+                      ? 'bg-brand-green/10 font-bold text-brand-green shadow-xs' 
+                      : 'bg-transparent font-medium text-gray-600 hover:text-brand-green hover:bg-brand-green/10 hover:-translate-y-0.5'
                   }`}
                 >
                   {link.label}
                   {link.hasDropdown && (
-                    <ChevronDown size={14} className="transition-transform duration-250 group-hover:rotate-180" />
+                    <ChevronDown size={14} className="transition-transform duration-250 group-hover:rotate-180 text-gray-400 group-hover:text-brand-green" />
                   )}
                 </button>
+
+                {/* Hover / Active Indicator Line */}
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2.5px] rounded-t-full transition-all duration-300 pointer-events-none ${
+                  currentView === link.id 
+                    ? 'w-6 bg-brand-green' 
+                    : 'w-0 bg-brand-green group-hover:w-5 opacity-70'
+                }`} />
 
                 {/* Mega Dropdown for Products */}
                 {link.hasDropdown && (
@@ -227,10 +234,10 @@ export default function Header({ currentView, setCurrentView, onRequestDemo }) {
               <React.Fragment key={link.id}>
                 <button 
                   onClick={() => handleNavClick(link.id)} 
-                  className={`flex items-center justify-between p-3 rounded-lg border-none text-[0.95rem] text-left cursor-pointer transition-colors ${
+                  className={`flex items-center justify-between p-3 rounded-xl border-none text-[0.95rem] text-left cursor-pointer transition-all duration-200 ${
                     currentView === link.id
                       ? 'bg-brand-green/10 font-bold text-brand-green'
-                      : 'bg-transparent font-medium text-gray-900'
+                      : 'bg-transparent font-medium text-gray-800 hover:bg-brand-green/10 hover:text-brand-green hover:translate-x-1'
                   }`}
                 >
                   <span>{link.label}</span>

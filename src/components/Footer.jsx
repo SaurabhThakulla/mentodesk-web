@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../assets/logo.png';
 
 export default function Footer({ setCurrentView, onRequestDemo }) {
   const handleNav = (page) => {
@@ -7,52 +8,92 @@ export default function Footer({ setCurrentView, onRequestDemo }) {
   };
 
   return (
-    <footer style={{ background: '#ffffff', borderTop: '1px solid var(--border-color)', paddingTop: '3rem', paddingBottom: '2rem' }}>
+    <footer className="bg-white border-t border-gray-200 pt-20 pb-8 mt-10">
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '2.5rem' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
           
-          <div>
-            <img src="/logo.png" alt="mentodesk" style={{ height: '28px', marginBottom: '0.85rem' }} />
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.5' }}>
+          <div className="lg:pr-6">
+            <img 
+              src={logoImg} 
+              alt="mentodesk" 
+              className="h-[28px] w-auto object-contain mb-5" 
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = `${import.meta.env.BASE_URL}logo.png`;
+              }}
+            />
+            <p className="text-[0.9rem] text-gray-500 leading-relaxed">
               Enterprise software platforms and custom solutions for educational and corporate institutions.
             </p>
           </div>
 
           <div>
-            <h4 style={{ fontSize: '0.88rem', fontWeight: '700', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Products</h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-              <li><button onClick={() => handleNav('products')} style={{ background: 'none', color: 'inherit' }}>MentoDesk Smart Campus</button></li>
-              <li><button onClick={() => handleNav('products')} style={{ background: 'none', color: 'inherit' }}>Fee Management System</button></li>
-              <li><button onClick={() => handleNav('products')} style={{ background: 'none', color: 'inherit' }}>Customized LMS</button></li>
+            <h4 className="text-[0.95rem] font-semibold text-gray-800 mb-5">Products</h4>
+            <ul className="flex flex-col gap-3.5">
+              <li>
+                <button onClick={() => handleNav('products')} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors text-left bg-transparent border-none p-0 cursor-pointer font-medium">
+                  MentoDesk Smart Campus
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('products')} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors text-left bg-transparent border-none p-0 cursor-pointer font-medium">
+                  Fee Management System
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('products')} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors text-left bg-transparent border-none p-0 cursor-pointer font-medium">
+                  Customized LMS
+                </button>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 style={{ fontSize: '0.88rem', fontWeight: '700', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Services</h4>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.85rem', color: 'var(--text-muted)' }}>
-              <li><button onClick={() => handleNav('services')} style={{ background: 'none', color: 'inherit' }}>Custom Software Dev</button></li>
-              <li><button onClick={() => handleNav('services')} style={{ background: 'none', color: 'inherit' }}>Enterprise ERP Solutions</button></li>
-              <li><button onClick={() => handleNav('services')} style={{ background: 'none', color: 'inherit' }}>Mobile App Development</button></li>
+            <h4 className="text-[0.95rem] font-semibold text-gray-800 mb-5">Services</h4>
+            <ul className="flex flex-col gap-3.5">
+              <li>
+                <button onClick={() => handleNav('services')} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors text-left bg-transparent border-none p-0 cursor-pointer font-medium">
+                  Custom Software Dev
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('services')} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors text-left bg-transparent border-none p-0 cursor-pointer font-medium">
+                  Enterprise ERP Solutions
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('services')} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors text-left bg-transparent border-none p-0 cursor-pointer font-medium">
+                  Mobile App Development
+                </button>
+              </li>
             </ul>
           </div>
 
           <div>
-            <h4 style={{ fontSize: '0.88rem', fontWeight: '700', marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Headquarters</h4>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: '1.5' }}>
-              Marina Bay Financial Tower 2, Singapore<br />
-              enterprise@mentodesk.com<br />
-              +65 6701 8890
-            </p>
+            <h4 className="text-[0.95rem] font-semibold text-gray-800 mb-5">Headquarters</h4>
+            <ul className="flex flex-col gap-3.5">
+              <li className="text-[0.9rem] text-gray-500 font-medium">
+                Marina Bay Financial Tower 2, Singapore
+              </li>
+              <li>
+                <a href="mailto:enterprise@mentodesk.com" className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors no-underline font-medium">
+                  enterprise@mentodesk.com
+                </a>
+              </li>
+              <li className="text-[0.9rem] text-gray-500 font-medium">
+                +65 6701 8890
+              </li>
+            </ul>
           </div>
 
         </div>
 
-        <div style={{ borderTop: '1px solid var(--border-color)', paddingTop: '1.25rem', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+        <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-5 text-[0.85rem] text-gray-400 font-medium">
           <div>© {new Date().getFullYear()} mentodesk technologies. All rights reserved.</div>
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <a href="#privacy" onClick={(e) => { e.preventDefault(); handleNav('faq'); }}>Privacy</a>
-            <a href="#terms" onClick={(e) => { e.preventDefault(); handleNav('faq'); }}>Terms</a>
-            <a href="#security" onClick={(e) => { e.preventDefault(); handleNav('faq'); }}>Security</a>
+          <div className="flex gap-8">
+            <a href="#privacy" onClick={(e) => { e.preventDefault(); handleNav('faq'); }} className="text-gray-400 hover:text-gray-600 transition-colors no-underline">Privacy</a>
+            <a href="#terms" onClick={(e) => { e.preventDefault(); handleNav('faq'); }} className="text-gray-400 hover:text-gray-600 transition-colors no-underline">Terms</a>
+            <a href="#security" onClick={(e) => { e.preventDefault(); handleNav('faq'); }} className="text-gray-400 hover:text-gray-600 transition-colors no-underline">Security</a>
           </div>
         </div>
       </div>

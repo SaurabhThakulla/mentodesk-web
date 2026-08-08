@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logoImg from '../assets/logo.png';
 import { 
   Menu, 
   X, 
@@ -109,7 +110,15 @@ export default function Header({ currentView, setCurrentView, onRequestDemo }) {
           
           {/* Logo Section */}
           <div onClick={() => handleNavClick('home')} className="flex items-center gap-2 cursor-pointer no-underline">
-            <img src="/logo.png" alt="MentoDesk" className="h-9 w-auto object-contain" />
+            <img 
+              src={logoImg} 
+              alt="MentoDesk" 
+              className="h-9 w-auto object-contain" 
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = `${import.meta.env.BASE_URL}logo.png`;
+              }}
+            />
             <span className="inline-flex items-center justify-center text-[0.68rem] font-bold px-2 py-0.5 rounded bg-brand-green-subtle text-brand-green border border-brand-green-border tracking-wider leading-none">
               Pro
             </span>
@@ -194,7 +203,7 @@ export default function Header({ currentView, setCurrentView, onRequestDemo }) {
           <div className="flex items-center gap-3">
             <button 
               onClick={() => onRequestDemo('Request Demo')} 
-              className="bg-gradient-to-br from-brand-green to-brand-green-hover text-white py-2.5 px-5 rounded-xl text-[0.86rem] font-semibold border-none flex items-center gap-1.5 shadow-[0_4px_14px_rgba(0,184,83,0.3)] cursor-pointer hover:-translate-y-px hover:shadow-[0_6px_20px_rgba(0,184,83,0.4)] transition-all duration-200"
+              className="hidden sm:flex bg-gradient-to-br from-brand-green to-brand-green-hover text-white py-2.5 px-5 rounded-xl text-[0.86rem] font-semibold border-none items-center gap-1.5 shadow-[0_4px_14px_rgba(0,184,83,0.3)] cursor-pointer hover:-translate-y-px hover:shadow-[0_6px_20px_rgba(0,184,83,0.4)] transition-all duration-200"
             >
               <Sparkles size={15} />
               <span>Request Demo</span>

@@ -133,7 +133,7 @@
   .section-label {
     display: inline-block;
     font-size: 0.78rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--brand-green);
@@ -142,7 +142,7 @@
 
   .section-title {
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 0.5rem;
   }

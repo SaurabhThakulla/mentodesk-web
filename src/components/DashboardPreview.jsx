@@ -13,7 +13,7 @@ export default function DashboardPreview() {
 
   const tabData = {
     'smart-campus': {
-      label: 'Campus Desk Ops',
+      label: 'Campus Ops',
       icon: Monitor,
       metrics: [
         { label: 'Desk Occupancy', value: '89.2%', change: '+14.5% peak', color: '#00b853' },
@@ -77,7 +77,7 @@ export default function DashboardPreview() {
       </div>
 
       {/* Console Tabs */}
-      <div className="flex gap-1.5 bg-gray-100 p-1 rounded-xl mb-5">
+      <div className="flex gap-1.5 bg-gray-100 p-1 rounded-xl mb-5 overflow-x-auto hide-scrollbar">
         {Object.keys(tabData).map((key) => {
           const item = tabData[key];
           const IconComp = item.icon;
@@ -86,7 +86,7 @@ export default function DashboardPreview() {
             <button
               key={key}
               onClick={() => setActiveConsoleTab(key)}
-              className={`flex-1 flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-[0.78rem] font-semibold border-none cursor-pointer transition-all duration-200 ${
+              className={`flex-1 min-w-max flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-[0.78rem] font-semibold border-none cursor-pointer transition-all duration-200 whitespace-nowrap ${
                 isActive 
                   ? 'bg-white text-brand-green shadow-sm' 
                   : 'bg-transparent text-gray-600 hover:text-gray-900'

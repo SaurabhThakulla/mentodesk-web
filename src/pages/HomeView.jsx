@@ -20,28 +20,28 @@ export default function HomeView({ setCurrentView, onRequestDemo }) {
     <div className="flex flex-col gap-20 pb-16">
       
       {/* 1. HERO SECTION - MODERN ENTERPRISE SAAS HERO */}
-      <section className="relative pt-20 pb-24 lg:pt-28 lg:pb-32 overflow-hidden min-h-[85vh] flex items-center">
+      <section className="relative pt-16 pb-20 lg:pt-24 lg:pb-28 overflow-hidden min-h-[85vh] flex items-center">
         <div className="absolute top-[-300px] left-1/2 -translate-x-1/2 w-[150vw] h-[1200px] bg-[radial-gradient(ellipse_at_center,rgba(0,184,83,0.12)_0%,rgba(2,132,199,0.06)_35%,rgba(255,255,255,0)_60%)] pointer-events-none z-0"></div>
 
         <div className="container relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+          <div className="flex flex-col items-center text-center">
             
-            {/* Left Column: Hero Copy & Actions */}
-            <div>
+            {/* Top: Hero Copy & Actions */}
+            <div className="max-w-4xl mx-auto flex flex-col items-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-green/10 border border-brand-green/25 text-brand-green text-[0.82rem] font-semibold mb-6 shadow-[0_2px_10px_rgba(0,184,83,0.08)]">
                 <Sparkles size={15} className="shrink-0" />
                 <span>Next-Gen AI Campus Operations <span className="hidden sm:inline">• ISO 27001 Certified</span></span>
               </div>
 
-              <h1 className="text-[clamp(2.5rem,4.2vw,3.6rem)] font-extrabold leading-[1.12] tracking-[-0.03em] mb-6 text-gray-900">
+              <h1 className="text-[clamp(2.5rem,4.8vw,4rem)] font-extrabold leading-[1.12] tracking-[-0.03em] mb-6 text-gray-900 text-center max-w-3xl">
                 Smart Campus & Enterprise Software, <span className="bg-gradient-to-br from-[#00b853] via-[#008f40] to-sky-600 bg-clip-text text-transparent">Built for Scale.</span>
               </h1>
 
-              <p className="text-[1.15rem] text-gray-500 leading-relaxed mb-9 max-w-[560px]">
+              <p className="text-[1.15rem] text-gray-500 leading-relaxed mb-9 max-w-2xl text-center">
                 Enterprise-grade platforms for modern institutions. Powering <strong>Smart Campus Operations</strong>, <strong>Tuition Fee Automation</strong>, and <strong>Custom LMS</strong>.
               </p>
 
-              <div className="flex items-center gap-4 flex-wrap mb-10">
+              <div className="flex items-center justify-center gap-4 flex-wrap mb-10">
                 <button 
                   onClick={() => onRequestDemo('Request Demo')} 
                   className="bg-gradient-to-br from-brand-green to-brand-green-hover text-white py-3.5 px-8 rounded-xl text-[0.96rem] font-bold border-none inline-flex items-center gap-2 shadow-[0_8px_25px_rgba(0,184,83,0.35)] cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,184,83,0.5)]"
@@ -59,7 +59,7 @@ export default function HomeView({ setCurrentView, onRequestDemo }) {
               </div>
 
               {/* Social Proof & Trust Metrics */}
-              <div className="flex items-center gap-4 pt-6 border-t border-gray-100 flex-wrap">
+              <div className="flex items-center justify-center gap-4 pt-6 border-t border-gray-100 flex-wrap w-full max-w-md">
                 <div className="flex items-center">
                   <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=80&q=80" alt="User" className="w-[34px] h-[34px] rounded-full border-2 border-white object-cover" />
                   <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="User" className="w-[34px] h-[34px] rounded-full border-2 border-white -ml-3 object-cover" />
@@ -72,8 +72,8 @@ export default function HomeView({ setCurrentView, onRequestDemo }) {
               </div>
             </div>
 
-            {/* Right Column: Interactive Dashboard Preview */}
-            <div className="relative w-full flex justify-center lg:justify-end items-center">
+            {/* Bottom: Interactive Dashboard Preview */}
+            <div className="relative w-full max-w-4xl mt-12 text-left">
               <DashboardPreview />
             </div>
 

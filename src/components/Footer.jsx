@@ -11,12 +11,12 @@ export default function Footer({ setCurrentView, onRequestDemo }) {
     <footer className="bg-white border-t border-gray-200 pt-20 pb-8 mt-10">
       <div className="container">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
-          
+
           <div className="lg:pr-6">
-            <img 
-              src={logoImg} 
-              alt="mentodesk" 
-              className="h-[28px] w-auto object-contain mb-5" 
+            <img
+              src={logoImg}
+              alt="mentodesk"
+              className="h-[28px] w-auto object-contain mb-5"
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = `${import.meta.env.BASE_URL}logo.png`;
@@ -70,18 +70,19 @@ export default function Footer({ setCurrentView, onRequestDemo }) {
           </div>
 
           <div>
-            <h4 className="text-[0.95rem] font-semibold text-gray-800 mb-5">Headquarters</h4>
+            <h4 className="text-[0.95rem] font-semibold text-gray-800 mb-5">Contact</h4>
             <ul className="flex flex-col gap-3.5">
               <li className="text-[0.9rem] text-gray-500 font-medium">
-                Marina Bay Financial Tower 2, Singapore
+                Manu Krishna<br />
+                KR Puram, Bangalore 560036
               </li>
               <li>
                 <a href="mailto:enterprise@mentodesk.com" className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors no-underline font-medium">
-                  enterprise@mentodesk.com
+                  contact@mentodesk.com
                 </a>
               </li>
               <li className="text-[0.9rem] text-gray-500 font-medium">
-                +65 6701 8890
+                +91 7639 143 881
               </li>
             </ul>
           </div>

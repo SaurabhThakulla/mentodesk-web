@@ -73,11 +73,10 @@ export default function Footer({ setCurrentView, onRequestDemo }) {
             <h4 className="text-[0.95rem] font-semibold text-gray-800 mb-5">Contact</h4>
             <ul className="flex flex-col gap-3.5">
               <li className="text-[0.9rem] text-gray-500 font-medium">
-                Manu Krishna<br />
                 KR Puram, Bangalore 560036
               </li>
               <li>
-                <a href="mailto:enterprise@mentodesk.com" className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors no-underline font-medium">
+                <a href="mailto:contact@mentodesk.com" className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors no-underline font-medium">
                   contact@mentodesk.com
                 </a>
               </li>

@@ -38,6 +38,7 @@ export default function Header({ currentView, setCurrentView, onRequestDemo }) {
     { id: 'industries', label: 'Industries' },
     { id: 'case-studies', label: 'Case Studies' },
     { id: 'about', label: 'About Us' },
+    { id: 'careers', label: 'Careers' },
     { id: 'faq', label: 'FAQ' },
     { id: 'contact', label: 'Contact' }
   ];

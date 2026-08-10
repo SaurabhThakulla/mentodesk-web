@@ -10,7 +10,7 @@ export default function Footer({ setCurrentView, onRequestDemo }) {
   return (
     <footer className="bg-white border-t border-gray-200 pt-20 pb-8 mt-10">
       <div className="container">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16">
 
           <div className="lg:pr-6">
             <img
@@ -64,6 +64,22 @@ export default function Footer({ setCurrentView, onRequestDemo }) {
               <li>
                 <button onClick={() => handleNav('services')} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors text-left bg-transparent border-none p-0 cursor-pointer font-medium">
                   Mobile App Development
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-[0.95rem] font-semibold text-gray-800 mb-5">Company</h4>
+            <ul className="flex flex-col gap-3.5">
+              <li>
+                <button onClick={() => handleNav('about')} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors text-left bg-transparent border-none p-0 cursor-pointer font-medium">
+                  About Us
+                </button>
+              </li>
+              <li>
+                <button onClick={() => handleNav('careers')} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors text-left bg-transparent border-none p-0 cursor-pointer font-medium">
+                  Careers
                 </button>
               </li>
             </ul>

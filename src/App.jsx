@@ -11,6 +11,7 @@ import IndustriesView from './pages/IndustriesView';
 import CaseStudiesView from './pages/CaseStudiesView';
 import ContactView from './pages/ContactView';
 import FaqView from './pages/FaqView';
+import CareerView from './pages/CareerView';
 
 export default function App() {
   const [currentView, setCurrentView] = useState('home');
@@ -40,6 +41,8 @@ export default function App() {
         return <ContactView onRequestDemo={handleOpenDemoModal} />;
       case 'faq':
         return <FaqView onRequestDemo={handleOpenDemoModal} />;
+      case 'careers':
+        return <CareerView onRequestDemo={handleOpenDemoModal} />;
       default:
         return <HomeView setCurrentView={setCurrentView} onRequestDemo={handleOpenDemoModal} />;
     }

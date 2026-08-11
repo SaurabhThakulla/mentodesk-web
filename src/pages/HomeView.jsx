@@ -78,7 +78,7 @@ export default function HomeView({ setCurrentView, onRequestDemo }) {
                   onClick={() => onRequestDemo('Schedule Consultation')} 
                   className="bg-white text-gray-900 py-3.5 px-8 rounded-xl text-[0.96rem] font-semibold border border-gray-200 inline-flex items-center gap-2 shadow-[0_2px_8px_rgba(0,0,0,0.04)] cursor-pointer transition-all duration-200 hover:bg-gray-50 hover:border-gray-300 hover:-translate-y-0.5"
                 >
-                  <span>Book Architecture Call</span>
+                  <span>Enquire Now</span>
                 </button>
               </div>
 
@@ -97,7 +97,7 @@ export default function HomeView({ setCurrentView, onRequestDemo }) {
             </div>
 
             {/* Bottom: Interactive Dashboard Preview */}
-            <div className="relative w-full max-w-4xl mt-12 text-left">
+            <div className="relative w-full max-w-4xl mt-12 text-left hidden">
               <DashboardPreview />
             </div>
 
@@ -293,80 +293,9 @@ export default function HomeView({ setCurrentView, onRequestDemo }) {
         </div>
       </section>
 
-      {/* 5. SPOTLIGHT CASE STUDY / SOCIAL PROOF */}
-      <section className="container mt-10">
-        <div className="text-center max-w-[640px] mx-auto mb-10">
-          <span className="inline-block text-[0.78rem] font-bold uppercase tracking-[0.1em] text-brand-green bg-brand-green/10 px-4 py-1.5 rounded-full mb-4">
-            Success Stories
-          </span>
-          <h2 className="text-[2rem] font-bold text-gray-900 mb-4 tracking-tight">
-            Our Milestones & Client Impact
-          </h2>
-        </div>
-        <div className="bg-gradient-to-br from-white to-brand-green-subtle border-[1.5px] border-brand-green-border rounded-[20px] py-12 px-10 shadow-[0_12px_35px_rgba(0,184,83,0.08)]">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
-            
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-green/10 text-brand-green text-[0.78rem] font-bold uppercase tracking-wider mb-4">
-                <GraduationCap size={16} />
-                <span>Spotlight Case Study • Singapore Campus</span>
-              </div>
-
-              <h3 className="text-[clamp(1.6rem,2.5vw,2.1rem)] font-extrabold text-gray-900 mb-3.5 tracking-tight">
-                Niellz International College
-              </h3>
-
-              <p className="text-[0.95rem] text-gray-600 leading-relaxed mb-6">
-                Faced with managing 45,000+ multinational students across 3 physical campus sites in Singapore, Niellz International College deployed an integrated MentoDesk Smart Campus & Fee Management Engine.
-              </p>
-
-              {/* Executive Quote Callout */}
-              <div className="bg-white border-l-4 border-brand-green py-3.5 px-4.5 rounded-r-xl text-[0.86rem] italic text-gray-900 mb-7 shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
-                "MentoDesk transformed our 3 campus locations into a single automated real-time operations dashboard, cutting admin workload by 60%."
-                <span className="not-italic font-bold text-[0.78rem] text-brand-green mt-1.5 block">
-                  — Dr. Aris Thorne, Director of Campus Operations
-                </span>
-              </div>
-
-              <button 
-                onClick={() => setCurrentView('case-studies')} 
-                className="bg-gradient-to-br from-brand-green to-brand-green-hover text-white py-3 px-6 text-[0.9rem] rounded-xl font-bold border-none inline-flex items-center gap-2 cursor-pointer transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(0,184,83,0.5)]"
-              >
-                <span>Read Full Case Study</span>
-                <ArrowRight size={15} />
-              </button>
-            </div>
-
-            {/* Right Side: Key Metrics Grid */}
-            <div className="flex flex-col gap-4">
-              <div className="py-4.5 px-5.5 rounded-xl flex items-center justify-between bg-brand-green/10 border border-brand-green/25">
-                <div>
-                  <div className="text-[0.76rem] text-gray-500 font-medium">Admin Efficiency</div>
-                  <div className="text-[1.45rem] font-extrabold text-brand-green">60% Time Saved</div>
-                </div>
-              </div>
-
-              <div className="py-4.5 px-5.5 rounded-xl flex items-center justify-between bg-sky-600/10 border border-sky-600/25">
-                <div>
-                  <div className="text-[0.76rem] text-gray-500 font-medium">Fee Recovery Rate</div>
-                  <div className="text-[1.45rem] font-extrabold text-sky-600">99.8% Recovery</div>
-                </div>
-              </div>
-
-              <div className="py-4.5 px-5.5 rounded-xl flex items-center justify-between bg-violet-600/10 border border-violet-600/25">
-                <div>
-                  <div className="text-[0.76rem] text-gray-500 font-medium">Active Student Scale</div>
-                  <div className="text-[1.45rem] font-extrabold text-violet-600">45,000 Students</div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
 
       {/* 6. INTERACTIVE ROI VALUE CALCULATOR */}
-      <section className="container">
+      <section className="container hidden">
         <RoiCalculator onRequestDemo={onRequestDemo} />
       </section>
 

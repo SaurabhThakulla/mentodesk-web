@@ -43,16 +43,16 @@ export default function ContactView({ onRequestDemo }) {
             <div className="flex flex-col gap-8 flex-1">
               <div className="flex items-center gap-5">
                 <Phone size={20} className="text-[#05c45e]" />
-                <span className="text-[0.95rem]">+65 6701 8890</span>
+                <span className="text-[0.95rem]">{CONTACT_INFO.phone}</span>
               </div>
               <div className="flex items-center gap-5">
                 <Mail size={20} className="text-[#05c45e]" />
-                <span className="text-[0.95rem]">enterprise@mentodesk.com</span>
+                <span className="text-[0.95rem]">{CONTACT_INFO.email}</span>
               </div>
               <div className="flex items-start gap-5">
                 <MapPin size={24} className="text-[#05c45e] shrink-0" />
                 <span className="text-[0.95rem] leading-snug">
-                  10 Marina Boulevard, Tower 2<br />Singapore 018983
+                  {CONTACT_INFO.address}
                 </span>
               </div>
             </div>

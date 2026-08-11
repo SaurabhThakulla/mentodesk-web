@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, CheckCircle2, Send, Instagram, Linkedin } from 'lucide-react';
+import { CONTACT_INFO } from '../config/contact';
 
 export default function ContactView({ onRequestDemo }) {
   const [submitted, setSubmitted] = useState(false);

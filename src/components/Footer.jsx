@@ -1,6 +1,8 @@
 import React from 'react';
 import logoImg from '../assets/logo.png';
 
+import { CONTACT_INFO } from '../config/contact';
+
 export default function Footer({ setCurrentView, onRequestDemo }) {
   const handleNav = (page) => {
     setCurrentView(page);

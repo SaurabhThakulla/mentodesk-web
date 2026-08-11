@@ -94,21 +94,21 @@ export default function Footer({ setCurrentView, onRequestDemo }) {
                 {CONTACT_INFO.address}
               </li>
               <li>
-                <a href="mailto:contact@mentodesk.com" className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors no-underline font-medium">
-                  contact@mentodesk.com
+                <a href={`mailto:${CONTACT_INFO.email}`} className="text-[0.9rem] text-gray-500 hover:text-brand-green transition-colors no-underline font-medium">
+                  {CONTACT_INFO.email}
                 </a>
               </li>
               <li className="text-[0.9rem] text-gray-500 font-medium">
-                +91 7639 143 881
+                {CONTACT_INFO.phone}
               </li>
             </ul>
             <div>
               <h4 className="text-[0.85rem] font-semibold text-gray-800 mb-3">Follow us on</h4>
               <div className="flex items-center gap-4">
-                <a href="https://www.instagram.com/mentodesk?igsh=MTF2M2R0bDllcXJteg==" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-green transition-colors cursor-pointer" aria-label="Instagram">
+                <a href={CONTACT_INFO.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-green transition-colors cursor-pointer" aria-label="Instagram">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
-                <a href="https://www.linkedin.com/company/mentodesk" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-green transition-colors cursor-pointer" aria-label="LinkedIn">
+                <a href={CONTACT_INFO.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-brand-green transition-colors cursor-pointer" aria-label="LinkedIn">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
               </div>

@@ -114,15 +114,12 @@ export default function Header({ currentView, setCurrentView, onRequestDemo }) {
             <img 
               src={logoImg} 
               alt="MentoDesk" 
-              className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105" 
+              className="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105 mix-blend-multiply" 
               onError={(e) => {
                 e.target.onerror = null;
                 e.target.src = `${import.meta.env.BASE_URL}logo.png`;
               }}
             />
-            <span className="inline-flex items-center justify-center text-[0.68rem] font-bold px-2 py-0.5 rounded bg-brand-green-subtle text-brand-green border border-brand-green-border tracking-wider leading-none transition-transform duration-300 group-hover:scale-105">
-              Pro
-            </span>
           </div>
 
           {/* Desktop Navigation */}

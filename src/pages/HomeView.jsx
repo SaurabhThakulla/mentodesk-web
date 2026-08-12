@@ -344,7 +344,7 @@ export default function HomeView({ setCurrentView, onRequestDemo }) {
 
       {/* 8. HIGH-CONVERTING BOTTOM CALL-TO-ACTION */}
       <section className="container">
-        <div className="bg-brand-green rounded-2xl py-12 px-8 text-center text-white">
+        <div className="bg-gradient-to-r from-[#00b853] to-[#008f40] rounded-2xl py-12 px-8 text-center text-white">
           <h2 className="text-3xl font-extrabold mb-2 text-white">
             Ready to Transform Your Campus Placements & Operations?
           </h2>

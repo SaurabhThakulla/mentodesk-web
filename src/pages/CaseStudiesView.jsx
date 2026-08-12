@@ -7,11 +7,11 @@ export default function CaseStudiesView({ onRequestDemo }) {
       title: 'Niellz International College (Singapore)',
       tag: 'Singapore EdTech Deployment',
       icon: GraduationCap,
-      desc: 'Deployed MentoDesk Smart Campus & Fee Management Engine across 3 physical campus sites in Singapore, servicing over 45,000 active students.',
+      desc: 'Deployed MentoDesk Smart Campus & Fee Management Engine across 3 physical campus sites in Singapore, servicing over 1,500 active students.',
       metrics: [
         { label: 'Admin Hours Saved', value: '60%', color: 'text-brand-green' },
         { label: 'Tuition Fee Recovery', value: '99.8%', color: 'text-sky-600' },
-        { label: 'Active Student Users', value: '45,000+', color: 'text-violet-600' }
+        { label: 'Active Student Users', value: '1,500+', color: 'text-violet-600' }
       ]
     },
     {
@@ -22,7 +22,7 @@ export default function CaseStudiesView({ onRequestDemo }) {
       metrics: [
         { label: 'Occupancy Efficiency', value: '85%', color: 'text-brand-green' },
         { label: 'Manual Ops Reduced', value: '100%', color: 'text-sky-600' },
-        { label: 'Daily Passages', value: '12,000+', color: 'text-violet-600' }
+        { label: 'Daily Passages', value: '1,800+', color: 'text-violet-600' }
       ]
     },
     {

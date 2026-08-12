@@ -37,17 +37,17 @@ export default function ContactView({ onRequestDemo }) {
         </div>
 
         {/* Main Card Container */}
-        <div className="bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-3 sm:p-4 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col md:flex-row w-full max-w-[1100px] mx-auto border border-white/50">
+        <div className="bg-white/80 backdrop-blur-xl rounded-[2.5rem] p-3 sm:p-4 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] flex flex-col md:flex-row w-full max-w-[1300px] mx-auto border border-white/50">
           
           {/* Left Column: Contact Info (Dark Card) */}
-          <div className="bg-gradient-to-br from-[#008f40] via-[#00a34a] to-[#05c45e] rounded-[2rem] p-10 lg:p-12 relative overflow-hidden text-white w-full md:w-[40%] min-h-[550px] flex flex-col shrink-0 shadow-inner">
+          <div className="bg-gradient-to-br from-[#008f40] via-[#00a34a] to-[#05c45e] rounded-[2rem] p-10 lg:p-12 relative overflow-hidden text-white w-full md:w-[40%] min-h-[650px] flex flex-col shrink-0 shadow-inner">
             
             {/* Decorative Glass Circles */}
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
             <div className="absolute top-10 -right-10 w-32 h-32 bg-white/20 rounded-full blur-xl"></div>
             
             <div className="relative z-10 flex-1 flex flex-col h-full">
-              <h3 className="text-3xl font-bold mb-4 tracking-tight">Contact Info</h3>
+              <h3 className="text-3xl font-bold mb-4 tracking-tight">Contact Information</h3>
               <p className="text-[1rem] text-white/90 mb-12 max-w-[280px] leading-relaxed font-medium">
                 Fill up the form and our team will get back to you within 24 hours.
               </p>
